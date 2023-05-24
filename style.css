@@ -1,0 +1,49 @@
+body {
+    background-color: #e8eaeee3;
+    text-align: center;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+}
+
+.card {
+    background-color: #FFF;
+    margin-right: 10px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 25px;
+    margin-bottom: 10px;
+    min-width: 332px;
+}
+
+.card-image {
+    border-radius: 50%;
+}
+
+.button-delete {
+    background-color: red;
+    color: white;
+    font-size: 16px;
+    border: none;
+    padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.input {
+    font-size: 16px;
+    padding: 8px;
+    border: none;
+    border-radius: 6px;
+}
+
+.msg {
+    color: red;
+    margin-top: 20px;
+}
+
+[v-cloak] {
+    display: none;
+}

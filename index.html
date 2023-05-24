@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de Contato</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>  
+    <div id="app">
+        <h1>Agenda de Contatos</h1>
+
+        <input class="input" type="text" v-model="searchText" placeholder="Entre com um nome">
+
+        <div class="msg" v-if="loading">
+           Carregando...
+        </div>
+        <div class="msg" v-if="listResult.length <= 0 && !loading" v-cloak>
+            Nenhum contato encontrado!
+        </div>
+
+        <ul v-if="!loading" v-cloak> 
+            <li v-for="item, index in listResult">
+                <div class="card">
+                    <address>
+                        <img class='card-image' v-bind:src="item.picture" v-bind:alt="item.firstName">
+                        <br>
+                        <strong>{{ item.firstName }} {{ item.lastName }}</strong>
+                        <br>Email: {{ item.email }}
+                        <br>Cidade: {{ item.city }}
+                    </address>
+                    <button class="button-delete" v-on:click="removeContact(index)">Excluir</button>
+                </div>
+            </li> 
+        </ul>
+
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
