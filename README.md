@@ -1,0 +1,2 @@
+# Angenda de Contatos
+Aplicação web em vue.js que utiliza uma api para exibir contatos na página e utiliza a reatividade do vue para executar uma busca dinâmica sem necessidade de nova requisição na página
